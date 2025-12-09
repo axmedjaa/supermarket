@@ -13,7 +13,7 @@ const UserOrder = () => {
         if (!user) return;
         setLoading(true);
         const res = await axios.get(
-          `http://localhost:3000/api/orders/${user._id}`
+          `/api/orders/${user._id}`
         );
         setOrders(res.data);
         setLoading(false);

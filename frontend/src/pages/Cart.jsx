@@ -11,7 +11,7 @@ const Cart = () => {
       try {
         if (!user) return;
         const res = await axios.get(
-          `http://localhost:3000/api/carts/${user._id}`
+          `/api/carts/${user._id}`
         );
         setCarts(res.data);
       } catch (error) {
