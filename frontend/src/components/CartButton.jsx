@@ -12,7 +12,7 @@ const CartButton = ({ product }) => {
     const checkCart = async () => {
       if (!user) return;
       try {
-        const res = await axios.get(`http://localhost:3000/api/carts/${user._id}`);
+        const res = await axios.get(`/api/carts/${user._id}`);
         const isAdded = res.data.some(item => item.productId === product._id);
         setAdded(isAdded);
       } catch (error) {
@@ -35,7 +35,7 @@ const CartButton = ({ product }) => {
           price: product.price,
           quantity: 1,
         }
-       await axios.post('http://localhost:3000/api/carts',cartItem );
+       await axios.post('/api/carts',cartItem );
       toast.success("item added to cart successfully");
       setAdded(true);
     } catch (error) {
@@ -47,7 +47,7 @@ const CartButton = ({ product }) => {
   };
   const handleRemove = async () => {
       try {
-        await axios.delete(`http://localhost:3000/api/carts/${user._id}/${product._id}`)
+        await axios.delete(`/api/carts/${user._id}/${product._id}`)
         setAdded(false)
         toast.success("item removed from cart successfully")
       } catch (error) {
