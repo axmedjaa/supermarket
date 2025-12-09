@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
           setUser(null);
           return;
         }
-        const res = await axios.get("http://localhost:3000/api/auth/profile", {
+        const res = await axios.get("/api/auth/profile", {
             headers:{
                 Authorization:`Bearer ${token}`
             }

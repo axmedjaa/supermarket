@@ -8,7 +8,7 @@ const Manage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/products');
+        const response = await fetch('/api/products');
         const data = await response.json();
         setData(data);
       } catch (error) {
@@ -20,7 +20,7 @@ const Manage = () => {
   },[])
   const handleDelete = async(id) => {
     try {
-      const response=await axios.delete(`http://localhost:3000/api/products/${id}`)
+      const response=await axios.delete(`/api/products/${id}`)
       setData(data.filter(item=>item._id!==id))
       alert(response.data)
       console.log(response.data)

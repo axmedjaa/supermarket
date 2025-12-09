@@ -7,7 +7,7 @@ const Message = () => {
     useEffect(() => {
         const fetchMessages = async () => {
           try {
-            const response = await fetch('http://localhost:3000/api/contact');
+            const response = await fetch('/api/contact');
             const data = await response.json();
             console.log(data);
             setMessages(data);
@@ -19,7 +19,7 @@ const Message = () => {
       }, []);
         const handleDelete = async (id) => {
           try {
-            await axios.delete(`http://localhost:3000/api/contact/${id}`);
+            await axios.delete(`/api/contact/${id}`);
             setMessages(messages.filter((msg) => msg._id !== id));
             toast.success("Message deleted successfully");
           } catch (error) {

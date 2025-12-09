@@ -28,7 +28,7 @@ const UserOrder = () => {
   }, [user]);
   const handleDelete = async (orderId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/orders/${orderId}`);
+      await axios.delete(`/api/orders/${orderId}`);
       setOrders(orders.filter((order) => order._id !== orderId));
       toast.success("order deleted successfully");
     } catch (error) {

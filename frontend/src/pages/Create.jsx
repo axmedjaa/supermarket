@@ -14,7 +14,7 @@ const Create = () => {
         const getProduct=async()=>{
              if(id){
              try {
-                const response=await axios.get(`http://localhost:3000/api/products/${id}`)
+                const response=await axios.get(`/api/products/${id}`)
                 setValue("name",response.data.name)
                 setValue("price",response.data.price)
                 setValue("description",response.data.description)
@@ -33,7 +33,7 @@ const Create = () => {
      const onSubmit=async(data)=>{
        try {
         if(id){
-          const res =await axios.put(`http://localhost:3000/api/products/${id}`,data)
+          const res =await axios.put(`/api/products/${id}`,data)
           toast.success("item updated successfully")
           console.log(res)
           navigate('/dashboard/manage')

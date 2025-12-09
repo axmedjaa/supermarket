@@ -12,7 +12,7 @@ const Signin = () => {
     const{login}=useAuth()
     const onSubmit=async(data)=>{
         try {
-            const response=await axios.post('http://localhost:3000/api/auth/signin',data)
+            const response=await axios.post('/api/auth/signin',data)
             setSuccess("success")
             const token=response.data.token
             login(token)

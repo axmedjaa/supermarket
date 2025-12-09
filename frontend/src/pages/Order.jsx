@@ -6,7 +6,7 @@ const Order = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/orders");
+        const res = await axios.get("/api/orders");
         setOrders(res.data);
       } catch (error) {
         console.log(error);
@@ -17,7 +17,7 @@ const Order = () => {
   }, []);
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/orders/${id}`);
+      await axios.delete(`/api/orders/${id}`);
       setOrders(orders.filter((order) => order._id !== id));
       toast.success("order deleted successfully");
     } catch (error) {
@@ -27,7 +27,7 @@ const Order = () => {
   };
   const handleStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:3000/api/orders/${id}`, { status });
+      await axios.put(`/api/orders/${id}`, { status });
       setOrders((prevOrders) =>
         prevOrders.map((order) =>
           order._id === id ? { ...order, status } : order

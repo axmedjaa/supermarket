@@ -12,7 +12,7 @@ const Register = () => {
     const{login}=useAuth()
     const onSubmit=async(data)=>{
         try {
-            const response=await axios.post('http://localhost:3000/api/auth/register',data)
+            const response=await axios.post('/api/auth/register',data)
             setSuccess("success")
             const token=response.data.token
             login(token)

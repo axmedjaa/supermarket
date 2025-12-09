@@ -1,5 +1,4 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { useAuth } from "../components/UseAuth";
@@ -23,7 +22,7 @@ const Contact = () => {
     }
     try {
         console.log(user);
-        const response=await axios.post('http://localhost:3000/api/contact',{...data, userId: user._id})
+        const response=await axios.post('/api/contact',{...data, userId: user._id})
         if(response.status===200){
             toast.success("Message sent successfully");
         }

@@ -23,7 +23,7 @@ const Cart = () => {
   const handleRemove = async (productId) => {
     try {
       await axios.delete(
-        `http://localhost:3000/api/carts/${user._id}/${productId}`
+        `/api/carts/${user._id}/${productId}`
       );
       alert("item removed from cart successfully");
       setCarts(carts.filter((c) => c.productId !== productId));
@@ -41,7 +41,7 @@ const Cart = () => {
       )
     );
     try {
-        await axios.put(`http://localhost:3000/api/carts/${cardId}`,{quantity:newQuantity});
+        await axios.put(`/api/carts/${cardId}`,{quantity:newQuantity});
     } catch (error) {
       console.log(error);
     }
@@ -52,9 +52,9 @@ const Cart = () => {
         toast.error("Cart is empty");
         return;
       }
-      await axios.post(`http://localhost:3000/api/orders`,carts);
+      await axios.post(`/api/orders`,carts);
       toast.success("order placed successfully");
-      const res = await axios.delete(`http://localhost:3000/api/carts/${user._id}`);
+      const res = await axios.delete(`/api/carts/${user._id}`);
      if(res.status === 200) {
       setCarts([]);
     } else {
