@@ -31,7 +31,7 @@ const Products = () => {
       }
     };
     getProducts();
-  });
+  }, []);
   const filterProducts = (products,filter,category) => {
     let result = products;
     // category
