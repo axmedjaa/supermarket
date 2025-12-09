@@ -17,7 +17,7 @@ import UserOrder from "./pages/UserOrder"
 import Footer from "./components/Footer"
 import About from "./pages/About"
 import Contact from "./pages/Contact"
-import Message from "./pages/message"
+import Message from "./pages/Message"
 function App() {
   return (
     <div className="">
