@@ -42,7 +42,7 @@ const Signin = () => {
                 {success && <p className='text-green-500'>{success}</p>}
             </form>
             <p className='text-sm text-gray-700'>don't have an account?
-                <Link className='text-blue-500' to="/register"> signin</Link></p>
+                <Link className='text-blue-500' to="/register"> signup</Link></p>
         </div>
     </div>
   )
