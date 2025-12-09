@@ -38,7 +38,7 @@ const Create = () => {
           console.log(res)
           navigate('/dashboard/manage')
        }else{
-        const res =await axios.post('http://localhost:3000/api/products',data)
+        const res =await axios.post('/api/products',data)
         toast.success("item added successfully")
         console.log(res)
        }
