@@ -30,7 +30,7 @@ const Products = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 mb-20">
         {
             products.slice(0,8).map((product)=>(
-                <div  className="relative group flex flex-col  justify-center p-6 border-3 border-gray-100 rounded-xl hover:shadow-lg transition-shadow duration-300 hover:scale-110" key={product._id}>
+                <div  className="relative group flex flex-col  justify-center p-6 border-3 border-gray-100 rounded-xl hover:shadow-lg transition-shadow duration-300 ease-in-out hover:scale-110" key={product._id}>
                 <Link to={`/product/${product._id}`} className="flex flex-col items-center justify-center">
                     <img src={product.image} alt={product.name} className="w-full h-60 object-cover mb-2" />
                     <h2 className="text-2xl font-semibold mt-2">{product.name}</h2>
