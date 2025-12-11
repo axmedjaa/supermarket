@@ -26,4 +26,4 @@ Frontend: React.js, Next.js, Tailwind CSS
 
 Backend: Node.js, Express.js (if used)
 
-Database: MongoDB / Supabase (depending on your implementation)
+Database: MongoDB 
