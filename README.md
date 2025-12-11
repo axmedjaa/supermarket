@@ -18,8 +18,9 @@ Responsive Design: Works on desktop, tablet, and mobile devices.
 Real-time Data: Dynamic updates of cart items and product listings.
 
 Admin Dashboard (optional): Manage products and view orders.
+## Live Demo
+Check out the live version of the Supermarket project here: [Supermarket Live](https://supermarket-2fg2.onrender.com/)
 
-Technologies Used
 
 Frontend: React.js, Next.js, Tailwind CSS
 
