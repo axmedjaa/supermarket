@@ -5,13 +5,13 @@ import multer from "multer";
 import mongoose from "mongoose";
 import path from "path";
 import { fileURLToPath } from "url";
-
+import dns from 'dns';
 import UserRouter from "./router/user.js";
 import ProductRouter from "./router/product.js";
 import cartRouter from "./router/cart.js";
 import orderRouter from "./router/order.js";
 import contactRouter from "./router/contact.js";
-
+dns.setServers(['8.8.8.8', '1.1.1.1']);
 dotenv.config();
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
